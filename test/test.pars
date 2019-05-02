@@ -1,4 +1,4 @@
-COLUMNS     test/CSDC2114_test.columns
+COLUMNS     test/CSDC2114_test.v2.columns
 #OUTPUT	    testbpz_fullrange_10198_gold.bpz
 SPECTRA     dc2_PCAsortedtemplates_v4.list
 PRIOR	    dc2v4_PCA_cosmodc2v114_py3

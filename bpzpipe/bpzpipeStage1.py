@@ -62,11 +62,12 @@ class BPZpipeStage1(PipelineStage):
         #Set up the command line command to run bpz_py3_hdf5.  The format is
         #bpz_py3_hdf5.py [infile] -P [parsfile] [specific BPZ keywords not in pars file, e.g. -INTERP]
         args = ['python3',
-                '/global/projecta/projectdirs/lsst/groups/PZ/BPZ/BPZpy3/pz_pdf/pz/BPZ/bpz_py3_hdf5.py',
+                f'{bpz_path}/bpz_py3_hdf5.py',
                 infile,
                 '-P',pfile,'-OUTPUT',
                 outfile_point,'-PROBS_LITE',outfile_probs]
-        subprocess.Popen(args)
+        p = subprocess.Popen(args)
+        p.wait()
         
         # You would normally call some other function or method
         # here to generate some output.  You can use self.comm, 
